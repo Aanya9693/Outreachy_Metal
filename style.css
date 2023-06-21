@@ -1,0 +1,568 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  all: unset;
+}
+body.darkMode {
+  background-color: #1b1918;
+  color: white;
+  transition: all ease-in-out 0.5s;
+}
+body.lightMode {
+  background-color: #dad8d7;
+  color: black;
+  transition: all ease-in-out 0.5s;
+}
+html {
+  font-size: 62.5%;
+}
+.container {
+  padding: 2rem 20rem;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menuList ul {
+  display: flex;
+  font-size: 16px;
+}
+.menuList li {
+  list-style: none;
+  padding: 0rem 2rem;
+  cursor: pointer;
+}
+.menuList li:hover {
+  color: #d9c88d;
+}
+.mobileNav.hide {
+  padding-top: 2rem;
+  position: absolute;
+  left: -1000px;
+}
+.mobileMenuList ul li {
+  margin-bottom: 10rem;
+  font-size: 2rem;
+  list-style: none;
+}
+.hamburgerIcon {
+  display: none;
+}
+.searchMode {
+  display: flex;
+  gap: 3rem;
+}
+.heroSection,
+.community,
+.blog,
+.whyMetal,
+.faqs {
+  padding: 15rem 0rem;
+  display: flex;
+  justify-content: center;
+}
+.heroSection .container,
+.community .container,
+.blog .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  /* gap: 10rem; */
+}
+.heroImage,
+.communityImage {
+  width: 45%;
+  height: 45rem;
+  background-color: #d9c88d;
+  border-radius: 1rem;
+}
+.heroImage img,
+.communityImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.8rem;
+}
+h1 {
+  font-size: 4.8rem;
+}
+p {
+  font-size: 1.6rem;
+}
+.heroWriting,
+.communityWriting,
+.blogWriting,
+.faqsWriting {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.communityImage,
+.blogSlider {
+  width: 45%;
+  height: 45rem;
+  border-radius: 0.8rem;
+  background-color: #d9c88d;
+}
+
+.heroBtns,
+.communityBtn,
+.blogBtn {
+  display: flex;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+.heroBtn,
+.communityBtn,
+.blogBtn {
+  padding: 1.5rem 4rem;
+  border-radius: 0.8rem;
+  font-weight: bold;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.contained {
+  background-color: #d9c88d;
+  width: fit-content;
+  color: black;
+  transition: all ease-in-out 0.5s;
+}
+.contained:hover {
+  border: 0.1rem solid #d9c88d;
+  color: #d9c88d;
+  width: fit-content;
+  background-color: transparent;
+  transition: all ease-in-out 0.5s;
+}
+.outlined {
+  border: 0.1rem solid #d9c88d;
+  color: #d9c88d;
+  width: fit-content;
+}
+.outlined:hover {
+  background-color: #d9c88d;
+  width: fit-content;
+  background: var(--accent-color);
+  color: white;
+  transition: all ease-in-out 0.5s;
+}
+.blog {
+  display: flex;
+  flex-direction: column;
+  height: 50rem;
+}
+.blog .container {
+  background-color: rgba(217, 200, 141, 0.5);
+}
+.label {
+  display: flex;
+  gap: 1rem;
+}
+.blogWriting p {
+  padding: 3rem 0rem;
+}
+.blogCards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow-x: scroll;
+  gap: 3rem;
+  height: 30rem;
+  width: 50%;
+  padding-bottom: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: #918a88 transparent;
+}
+
+.blogCards::-webkit-scrollbar {
+  width: 8px;
+  height: 0.4rem;
+}
+
+.blogCards::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.blogCards::-webkit-scrollbar-thumb {
+  background-color: whitesmoke;
+  border-radius: 20px;
+}
+
+.blogCards::-webkit-scrollbar-thumb:hover {
+  background-color: gray;
+}
+
+.blogCards .blogCard {
+  width: 100%;
+  height: 30rem;
+  /* border: 1px solid white; */
+  color: white;
+  border-radius: 0.8rem;
+  background-color: #1b1918;
+  display: flex;
+  justify-content: space-between;
+}
+.blogCards .blogCard:hover {
+  /* scale: 1.01; */
+  border-radius: 0.8rem;
+}
+.blogCard img {
+  background-color: #918a88;
+  width: 100%;
+  height: 60%;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+}
+.blogCard .briefDetails {
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+.blogCard h5 {
+  background-color: #d9c88d;
+  width: fit-content;
+  color: white;
+  font-size: 1.4rem;
+  height: 3rem;
+  width: fit-content;
+  padding: 0rem 2rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+}
+.blogCard h4 {
+  font-size: 2rem;
+}
+.blogCards .blogBtn {
+  padding: 0.5rem 1.2rem;
+  font-size: 1.4rem;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blogBtn:hover {
+  color: white;
+}
+.author-date {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  font-weight: lighter;
+  color: #9d9795;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 10rem;
+}
+p.description {
+  font-size: 1.6rem;
+}
+.card {
+  width: 30%;
+  height: 30rem;
+  padding: 2rem 2rem;
+  border-radius: 1rem;
+  background-color: rgba(217, 200, 141, 0.5);
+  transition: all ease-in-out 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card img {
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+  object-position: center;
+}
+.card:hover {
+  scale: 1.05;
+  transition: all ease-in-out 0.5s;
+}
+.faqs {
+  display: flex;
+  flex-direction: column;
+}
+
+.faqsWriting {
+  width: 50%;
+}
+
+.accordion-sec {
+  background: var(--secondary-color);
+}
+.accordion_container {
+  background-color: #c2bebd;
+  position: relative;
+  min-height: 100vh;
+}
+
+.accordion-sec {
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  align-items: center;
+}
+.accordion_label {
+  width: 98%;
+}
+.accordion_label,
+.accordion_content {
+  padding: 20px 25px;
+}
+.accordion_label {
+  display: block;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.1s;
+  position: relative;
+}
+.accordion_label:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.accordion_label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50);
+  right: 20px;
+  width: 12px;
+  height: 6px;
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
+  background-size: contain;
+  transition: transform 0.4s;
+}
+.accordion_content {
+  background: #d9c88d;
+  color: #000;
+  line-height: 1.6;
+  font-size: 0.85em;
+  display: none;
+}
+
+.accordion_input {
+  display: none;
+}
+.accordion_input:checked ~ .accordion_content {
+  display: block;
+}
+.accordion_input:checked ~ .accordion_label::after {
+  transform: translateY(-50%) rotate(0.5turn);
+}
+.accordion {
+  border: 1px solid #d9c88d;
+  height: auto;
+  width: 90rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-top: 10rem;
+}
+footer {
+  border-top: 2px solid #d9c88d;
+}
+footer p {
+  font-size: 1.2rem;
+}
+.footerMain {
+  display: flex;
+  justify-content: space-between;
+}
+.footerMain ul {
+  display: flex;
+  gap: 3rem;
+}
+.footerMain ul li {
+  list-style: none;
+  font-size: 1.6rem;
+}
+.social-icons li img:hover {
+  fill: #d9c88d;
+}
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+.copyright ul {
+  display: flex;
+  gap: 3rem;
+}
+.copyright ul li {
+  list-style: none;
+  transition: all ease-in-out 0.5s;
+}
+.copyright ul li:hover {
+  scale: 1.2;
+  transition: all ease-in-out 0.5s;
+}
+
+@media (max-width: 959.95px) {
+  .container {
+    padding: 1rem 2rem;
+  }
+  .menuList ul {
+    display: none;
+  }
+  .mobileNav.hide {
+    padding-top: 2rem;
+    position: absolute;
+    left: -1000px;
+    border-bottom: 0.1rem solid #d9c88d;
+    transition: all ease-in-out 0.5s;
+  }
+  .mobileNav.show {
+    background-color: #1b1918;
+    color: white;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    border-bottom: 0.1rem solid #d9c88d;
+    transition: all ease-in-out 0.5s;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .heroSection .container,
+  .community .container,
+  .blog .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .heroWriting,
+  .communityWriting,
+  .blogWriting,
+  .faqsWriting {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 5rem;
+  }
+  .heroImage,
+  .communityImage,
+  .blogSlider {
+    width: 100%;
+    height: 30rem;
+  }
+  .heroSection,
+  .community,
+  .blog,
+  .whyMetal,
+  .faqs {
+    padding: 0rem 0rem;
+  }
+
+  .heroBtn,
+  .communityBtn,
+  .blogBtn {
+    padding: 1rem 3rem;
+  }
+  .searchIcon {
+    display: none;
+  }
+  .hamburgerIcon {
+    display: flex;
+  }
+  .cards {
+    margin-top: 0rem;
+  }
+  .card:nth-child(1) {
+    display: flex;
+    height: auto;
+    justify-content: flex-end !important;
+  }
+  .card {
+    width: 100%;
+  }
+  .blog {
+    height: auto;
+    padding: 2rem 0rem;
+  }
+  .blogCards {
+    width: 100%;
+  }
+  .carouselSlide {
+    height: 30rem;
+  }
+  .carouselContainer {
+    width: 100%;
+  }
+  .communityBtn {
+    margin-bottom: 2rem;
+  }
+  .faq .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .accordion {
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .community .container h1 {
+    margin-bottom: 2rem !important;
+  }
+  .footerSocial ul {
+    display: flex;
+
+    gap: 2rem;
+  }
+  footer {
+    padding: 2rem 0rem;
+  }
+  .footerMain {
+    display: flex;
+    flex-direction: column;
+  }
+  .footerMain img {
+    width: 100%;
+    height: 100%;
+  }
+  .footerMain ul {
+    margin-top: 2rem;
+    display: block;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 1.5rem;
+  }
+  .footerMain ul li {
+    margin-bottom: 2rem;
+  }
+  .copyright {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: baseline;
+  }
+  .copyright p {
+    margin-top: 2rem;
+  }
+}
